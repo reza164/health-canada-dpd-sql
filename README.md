@@ -28,7 +28,7 @@ The leading pair in this snapshot was **octisalate and avobenzone**, recorded to
 
 An anti-join found **938 product codes** without a matching record in the deduplicated therapeutic-class table: 927 Veterinary, 8 Human and 3 Radiopharmaceutical. This is a coverage observation, not evidence that the products are defective or misclassified.
 
-The original exploration also attempted a class-level percentage using a direct join to the therapeutic table. That join can multiply product rows when a product has more than one therapeutic record. The revised query uses `EXISTS` so each product contributes once to the denominator. The revised percentage results have **not yet been run on the original database**.
+The original exploration also attempted a class-level percentage using a direct join to the therapeutic table. That join can multiply product rows when a product has more than one therapeutic record. The revised query uses `EXISTS` so each product contributes once to the denominator. The revised query was run against the local database. It confirmed that 12,418 product codes had a therapeutic match and 938 did not.
 
 [Coverage and validation queries](06_therapeutic_coverage.sql)
 
