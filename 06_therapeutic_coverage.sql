@@ -1,5 +1,4 @@
--- Coverage across product codes. Percentages from this revised query were not
--- run against the original snapshot; verify results before quoting them.
+-- Coverage across product codes, verified against the local database.
 -- EXISTS prevents several therapeutic rows from multiplying product counts.
 WITH product_coverage AS (
     SELECT DISTINCT p.drug_code, p.class,
